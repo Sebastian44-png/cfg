@@ -1,0 +1,53 @@
+{
+	"name": "latex-table-helper",
+	"publisher": "Lw-lonely",
+	"displayName": "LaTex Table Helper",
+	"description": "Latex Table Helper provides an easy way to generate table.",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/YLonely/latex-table-helper.git"
+	},
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"activationEvents": [
+		"onLanguage:latex"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.createTable",
+				"title": "LaTex: Create table"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.createTable",
+					"when": "editorLangId == latex"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"eslint": "^5.13.0",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "f8d29bf6-56f7-4d4c-b559-1858c18b07f5",
+		"publisherId": "adf5c583-64a3-4f73-a0a8-5a212d5f0537",
+		"publisherDisplayName": "Lw"
+	}
+}
