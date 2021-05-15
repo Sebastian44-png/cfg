@@ -1,8 +1,8 @@
 syntax on
 
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=3 softtabstop=4
+set shiftwidth=3
 set expandtab
 set smartindent
 set nu
@@ -14,6 +14,7 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set nocompatible
+set autowriteall
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -58,7 +59,7 @@ let mapleader=" "
 nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <Leader>gf :YcmCompleter FixIt<CR>
 
-map <F2> :NERDTreeToggle<CR>
+map <C-b> :NERDTreeToggle<CR>
 nnoremap <Leader>b :ls<CR>:b<Space>
 noremap <C-i> :bn<CR>
 nnoremap <Leader>m :bp<CR>
